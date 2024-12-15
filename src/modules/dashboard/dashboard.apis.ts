@@ -1,10 +1,10 @@
 // This hook will hold all the API that will be used in Dashboard
 // Remove the dummy data when starting actual development
 import useSWR from 'swr';
-import { ICreateUserRequestBody, IUser, IBulkUserResponse } from '../dashboard.types';
 import useSWRMutation from 'swr/mutation';
-import { useHttpMethodContext } from '../../../context/HttpContextProvider';
-import { ISwrMutationOptions } from '../../../types/common';
+import { IBulkUserResponse, ICreateUserRequestBody, IUser } from './dashboard.types';
+import { useHttpMethodContext } from '../../context/HttpContextProvider';
+import { ISwrMutationOptions } from '../../types/common';
 
 export const useFetchUserApi = () => {
 	const response = useSWR<IBulkUserResponse>('/users');
